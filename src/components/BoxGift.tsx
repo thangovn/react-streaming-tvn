@@ -18,11 +18,15 @@ const BoxGridLiveItem = ({ gift }: { gift: LiveGiftMessagePayload }) => {
       className={classNames(giftNotifyBaseClass, "animate__fadeInRight")}
     >
       <Avatar src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPkwYQuTYcqB7wnAvzApNYO2MLl_Llz4RyyA&usqp=CAU" />
-      <div className="d-flex flex-column ms-2">
+      <div className="ms-2">
         <div className="fw-bolder">{gift.user_name}</div>
-        <div>
-          Send {gift.gift_data.name} x {gift.quantity}
-        </div>
+        <div>Send {gift.gift_data.name}</div>
+      </div>
+      <div
+        style={{ flex: 1, textAlign: "right", fontSize: 20 }}
+        className="me-3"
+      >
+        x {gift.quantity}
       </div>
     </div>
   );
